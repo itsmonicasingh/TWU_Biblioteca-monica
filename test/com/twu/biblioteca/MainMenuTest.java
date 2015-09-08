@@ -25,13 +25,11 @@ public class MainMenuTest {
     }
 
     @Test
-    public void shouldDisplayOptionsWhichAreAvalilabeToTheUserInTheMainMenu() {
+    public void shouldDisplayOptionsWhichAreAvailabeToTheUserInTheMainMenu() {
         ArrayList<String> userOptions = new ArrayList<String>();
         userOptions.add("1. List Of Books In The Library");
         MainMenu mainMenu = new MainMenu(userOptions);
-
-        mainMenu.displayUserOptions();
-
-        assertEquals("1. List Of Books In The Library\n", outContent.toString());
+        assertEquals("1. List Of Books In The Library", mainMenu.toString());
     }
+
 }

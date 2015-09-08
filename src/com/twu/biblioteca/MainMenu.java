@@ -9,9 +9,12 @@ public class MainMenu {
         this.userOptions = options;
     }
 
-    public void displayUserOptions() {
-        for (String userOption : userOptions) {
-            System.out.println(userOption);
+    @Override
+    public String toString() {
+        String listOfOptions = "";
+        for (String option : userOptions) {
+            listOfOptions = option;
         }
+        return listOfOptions;
     }
 }
