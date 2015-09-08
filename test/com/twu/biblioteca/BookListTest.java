@@ -26,14 +26,14 @@ public class BookListTest {
 
     @Test
     public void shouldDisplayBookListWhenDisplayIsCalled() {
-        ArrayList<String> books = new ArrayList<String>();
-        books.add("Alchemist");
-        books.add("Dracula");
-        books.add("Sixth Sense");
+        ArrayList<Book> books = new ArrayList<Book>();
+        books.add(new Book("Alchemist", "Paulo Coelho", 2006));
+        books.add(new Book("Draclua", "Bram Stoker", 1998));
+        books.add(new Book("Sixth Sense", "M Night", 1999));
         BookList bookList = new BookList(books);
 
         bookList.display();
 
-        assertEquals(books.toString(), outContent.toString());
+        assertEquals("Title"+"\t"+"Author"+"\t"+"Year Of Publication"+"\n"+books.toString(), outContent.toString());
     }
 }
