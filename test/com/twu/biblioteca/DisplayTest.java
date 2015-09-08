@@ -27,7 +27,7 @@ public class DisplayTest {
     public void shouldDisplayAnyStringPassedToIt() {
         Display display = new Display("I will display any string that is passed to me");
 
-        display.message();
+        display.display();
 
         assertEquals("I will display any string that is passed to me", outputStream.toString());
     }

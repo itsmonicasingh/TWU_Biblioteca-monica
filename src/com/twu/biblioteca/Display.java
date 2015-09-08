@@ -7,7 +7,7 @@ public class Display {
         this.message = message;
     }
 
-    public void message() {
+    public void display() {
         System.out.print(message);
     }
 }

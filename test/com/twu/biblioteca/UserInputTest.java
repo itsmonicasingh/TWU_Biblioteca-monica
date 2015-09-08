@@ -10,13 +10,13 @@ import static org.junit.Assert.assertEquals;
 public class UserInputTest {
 
     @Test
-    public void shouldReturnTheInputEnteredByTheUser() {
-        String input = "1. List Of Books In The Library";
-        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+    public void shouldReturnTheCorrectInput() {
+        String userChoice = "1";
+        final ByteArrayInputStream inContent = new ByteArrayInputStream(userChoice.getBytes());
         System.setIn(inContent);
         Scanner scanner = new Scanner(System.in);
-        UserInput userInput = new UserInput(scanner);
+        UserInput inputUnit = new UserInput(scanner);
 
-        assertEquals("1. List Of Books In The Library", userInput.read());
+        assertEquals(1, inputUnit.readInput());
     }
 }
