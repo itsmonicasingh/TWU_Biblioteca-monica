@@ -2,12 +2,12 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
-//has a list of books which it can display
-public class BookList {
+//has a collection of books which it can display
+public class Library {
 
     ArrayList<Book> bookList = new ArrayList<Book>();
 
-    public BookList(ArrayList<Book> bookList) {
+    public Library(ArrayList<Book> bookList) {
         this.bookList = bookList;
     }
 

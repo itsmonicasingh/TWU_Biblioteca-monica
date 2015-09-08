@@ -1,10 +1,16 @@
 package com.twu.biblioteca;
 
 public class BibliotecaApp {
+    WelcomeMessage welcomeMessage;
+    Library bookList;
 
-    public static void main(String[] args) {
-        WelcomeMessage welcomeMessage = new WelcomeMessage("Welcome to the Bangalore Public Library");
+    public BibliotecaApp(WelcomeMessage welcomeMessage, Library bookList) {
+        this.welcomeMessage = welcomeMessage;
+        this.bookList = bookList;
+    }
+
+    public void startApp() {
         welcomeMessage.display();
-
+        bookList.display();
     }
 }

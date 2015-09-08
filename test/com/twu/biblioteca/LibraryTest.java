@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class BookListTest {
+public class LibraryTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -30,7 +30,7 @@ public class BookListTest {
         books.add(new Book("Alchemist", "Paulo Coelho", 2006));
         books.add(new Book("Draclua", "Bram Stoker", 1998));
         books.add(new Book("Sixth Sense", "M Night", 1999));
-        BookList bookList = new BookList(books);
+        Library bookList = new Library(books);
 
         bookList.display();
 
