@@ -9,8 +9,4 @@ public class BibliotecaApp {
         this.bookList = bookList;
     }
 
-    public void startApp() {
-        welcomeMessage.display();
-        bookList.display();
-    }
 }

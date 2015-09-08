@@ -10,6 +10,6 @@ public class BookTest {
     public void shouldDisplayBookDetailsLikeTitleAuthorYeayOfPublication() {
         Book book = new Book("Alchemist", "Paulo Coelho", 2006);
 
-        assertEquals("Alchemist"+"\t"+"Paulo Coelho"+"\t"+"2006", book.toString());
+        assertEquals(String.format("%-30s%-30s%-20s\n", "Alchemist", "Paulo Coelho", 2006), book.toString());
     }
 }

@@ -11,9 +11,11 @@ public class Library {
         this.bookList = bookList;
     }
 
-    public void display() {
-        String columnHeader = "Title"+"\t"+"Author"+"\t"+"Year Of Publication"+"\n";
-        System.out.print(columnHeader);
-        System.out.print(bookList);
+    @Override
+    public String toString() {
+        String bookDetails = String.format("%-30s%-30s%-20s\n", "Title", "Author", "Year Of Publication");
+        for (Book book : bookList)
+            bookDetails += book.toString();
+        return bookDetails;
     }
 }

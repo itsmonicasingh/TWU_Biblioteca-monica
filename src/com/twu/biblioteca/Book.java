@@ -6,14 +6,14 @@ public class Book {
     private String author;
     private int year;
 
-    public Book(String name, String author, int year) {
-        this.title = name;
+    public Book(String title, String author, int year) {
+        this.title = title;
         this.author = author;
         this.year = year;
     }
 
     @Override
     public String toString() {
-        return title +"\t"+author+"\t"+year;
+        return String.format("%-30s%-30s%-20s\n", this.title, this.author, this.year);
     }
 }

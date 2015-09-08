@@ -1,39 +1,23 @@
 package com.twu.biblioteca;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.*;
 public class LibraryTest {
 
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-
-    @Before
-    public void setupStreams() {
-        System.setOut(new PrintStream(outContent));
-    }
-
-    @After
-    public void cleanUpStreams() {
-        System.setOut(System.out);
-    }
-
     @Test
-    public void shouldDisplayBookListWhenDisplayIsCalled() {
-        ArrayList<Book> books = new ArrayList<Book>();
-        books.add(new Book("Alchemist", "Paulo Coelho", 2006));
-        books.add(new Book("Draclua", "Bram Stoker", 1998));
-        books.add(new Book("Sixth Sense", "M Night", 1999));
-        Library bookList = new Library(books);
+    public void shouldReturnTheBookDetailsOfTheBooksInTheLibrary() {
+        ArrayList<Book> listOfBooks = new ArrayList<Book>();
+        listOfBooks.add(new Book("Alchemist", "Paulo Coelho", 2006));
+        listOfBooks.add(new Book("Dracula", "Bram Stoker", 1998));
+        listOfBooks.add(new Book("Sixth Sense", "M Night", 1999));
+        Library library = new Library(listOfBooks);
 
-        bookList.display();
-
-        assertEquals("Title"+"\t"+"Author"+"\t"+"Year Of Publication"+"\n"+books.toString(), outContent.toString());
+        assertEquals(String.format("%-30s%-30s%-20s\n", "Title", "Author", "Year Of Publication") +
+                String.format("%-30s%-30s%-20s\n", "Alchemist", "Paulo Coelho", 2006) +
+                String.format("%-30s%-30s%-20s\n", "Dracula", "Bram Stoker", 1998) +
+                String.format("%-30s%-30s%-20s\n", "Sixth Sense", "M Night", 1999), library.toString());
     }
 }
