@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-//Book has a title, author and year of publication
+//Book has a title, author and year of publication i.e book details
 public class Book {
     private String title;
     private String author;
